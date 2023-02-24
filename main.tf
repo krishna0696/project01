@@ -13,10 +13,4 @@ resource "aws_instance" "one" {
 resource "aws_s3_bucket" "two" {
   bucket = "mk"
 }
-resource "aws_ebs_volume" "three"{
-  availability_zone = "ap-south-1"
-  size= 40
-  tags ={
-    Name=vks
-  }
 }
