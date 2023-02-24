@@ -6,9 +6,6 @@ region ="ap-south-1"
 resource "aws_instance" "one" {
   ami="ami-0e742cca61fb65051"
   instance_type="t2.micro"
-  tags ={
-    Name="krishna"
-  }
 }
 resource "aws_s3_bucket" "two" {
   bucket = "mks"
