@@ -8,23 +8,23 @@ pipeline{
         }
         stage('init'){
         steps{
-            sh 'terraform init'
+            sh ("terraform init");
         }
         }
         stage('validate'){
         steps{
-            sh 'terraform validate'
+            sh ("terraform validate");
         }
         }
         stage('plan'){
         steps{
-            sh 'terraform plan'
+            sh ("terraform plan");
         }
         }
         stage('terraform action'){
         steps{
-            echo "terraform action from the parameter is --> "${action}""
-            sh ("terraform ${action} --auto-approve")
+            echo "terraform action from the parameter is --> ${action}"
+            sh ("terraform ${action} --auto-approve");
         }
         }
     }
